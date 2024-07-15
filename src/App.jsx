@@ -28,7 +28,7 @@ function App() {
         { id: nextId, value: clickedValues }
       ]);
       setNextId(prevId => prevId + 1);
-      setClickedValues(calcValue);
+      setClickedValues(calcValue );
     } catch {
       setClickedValues("Error");
     }
