@@ -16,6 +16,12 @@ function App() {
     setClickedValues("");
   }
 
+  const clearAll = () => {
+    setClickedValues("");
+    setHistory([]);
+    setNextId(0);
+  }
+
   const back = () => {
     setClickedValues(prev => prev.slice(0, -1));
   }
@@ -57,7 +63,7 @@ function App() {
       <div className="buttons">
         <Button value={"C"} className='gray' onclick={clear} />
         <Button value={"←"} className='gray' onclick={back} />
-        <Button value={"%"} className='gray' onclick={() => handleButton("%")} />
+        <Button value={"CE"} className='gray' onclick={() => clearAll()} />
         <Button value={"/"} className="opera" onclick={() => handleButton("/")} />
         <Button value={7} className="nums" onclick={() => handleButton("7")} />
         <Button value={8} className="nums" onclick={() => handleButton("8")} />
